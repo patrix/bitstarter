@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
 //  response.send('Hello World 2!');
 var content;
 var fs = require('fs');
-var buff = new Buffer();
+var buff = new Buffer(1024);
 response.send(buffer.toString('utf-8', fs.readFileSync('index.html')))});
 //, function (err, data) {
 //content = data;
