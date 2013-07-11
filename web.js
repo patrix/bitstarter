@@ -9,13 +9,15 @@ app.get('/', function(request, response) {
 //  response.send('Hello World 2!');
 var content;
 var fs = require('fs');
-fs.readFileSync('index.html', function (err, data) {
-content = data;
-});
+var buff = new Buffer();
+response.send(buffer.toString('utf-8', fs.readFileSync('index.html')))});
+//, function (err, data) {
+//content = data;
+//});
 //var buf = new Buffer(html.length);
 //buf.write(html)
-  response.send(content);
-});
+//  response.send(content);
+//});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
